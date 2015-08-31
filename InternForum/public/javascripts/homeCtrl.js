@@ -3,6 +3,7 @@ angular.module('InternForum').controller(
 	'$scope',
 	'$stateParams',
 	function($scope, $stateParams){
-	  $scope.value = "home";
+	  $scope.pageTitle = "Intern Forums";
+	  $scope.data = [{title:'what',author: 'Kody'},{title:'blah',author: 'chris'},{title:'what',author: 'admin'},{title:'what',author: 'Kody'}];
 
 }]);

@@ -1,2 +1,21 @@
 
-<h3> <a href="#/post">{{value}}</a></h3>
+<h3> <a href="#/post">{{pageTitle}}</a></h3>
+
+
+<table class = "hoverable">
+        <thead>
+          <tr>
+              <th data-field="id">Title</th>
+              <th data-field="name">Author</th>
+              <th data-field="name">Date</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="item in data">
+            <td>{{item.title}}</td>
+            <td>{{item.author}}</td>
+            <td><i class="material-icons"><a href="#/posts/{{post._id}}"> visibility</i></td>
+          </tr>
+        </tbody>
+      </table>
