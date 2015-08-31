@@ -7,7 +7,7 @@ app.config([
       $stateProvider
         .state('home', {
           url: '/home',
-          templateUrl: '/home.html',
+          templateUrl: '/templates/home.html',
           controller: 'homeCtrl'//,
           //resolve: {
           //postPromise: ['posts', function(posts){
@@ -19,7 +19,7 @@ app.config([
         $stateProvider
         .state('postDetails', {
           url: '/post',
-          templateUrl: '/post.html',
+          templateUrl: '/templates/post.html',
           controller: 'postCtrl'//,
           //resolve: {
           //postPromise: ['posts', function(posts){
@@ -52,6 +52,8 @@ app.config([
           //}]
           //}
         })   
+
+         $urlRouterProvider.otherwise('home');
     }
 
 
