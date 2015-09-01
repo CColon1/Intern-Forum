@@ -1,5 +1,6 @@
 var app = angular.module('InternForum', ['ui.router'])
 
+
 app.config([
     '$stateProvider',
     '$urlRouterProvider',
@@ -31,7 +32,7 @@ app.config([
         $stateProvider
         .state('login', {
           url: '/login',
-          templateUrl: '/login.html',
+          templateUrl: '/templates/login.html',
           controller: 'loginCtrl'//,
           //resolve: {
           //postPromise: ['posts', function(posts){
@@ -43,8 +44,8 @@ app.config([
         $stateProvider
         .state('register', {
           url: '/register',
-          templateUrl: '/register.html',
-          controller: 'registerCtrl'//,
+          templateUrl: '/templates/register.html',
+          controller: 'authController'
           //resolve: {
           //postPromise: ['posts', function(posts){
           //  var x = posts.getAll();

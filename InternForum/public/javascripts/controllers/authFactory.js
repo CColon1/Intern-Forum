@@ -2,9 +2,9 @@
  * Created by 502434605 on 8/31/2015.
  */
 
-var app = angular.module('InternForum', [])
+angular.module('InternForum')
 
-app.factory('authFactory',[$http, $window, function($http, $window){
+.factory('authFactory',['$http', '$window', function($http, $window){
     var auth = {};
 
     auth.saveToken = function(token) {
@@ -47,7 +47,8 @@ app.factory('authFactory',[$http, $window, function($http, $window){
     };
 
     auth.register = function(user){
-        return $http.post('/register', user).success(function(data){
+        return $http.post('/register', $.param(user),{
+            headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}}).success(function(data){
             auth.saveToken(data.token);
         });
     };

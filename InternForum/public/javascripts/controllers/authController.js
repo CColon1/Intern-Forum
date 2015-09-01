@@ -2,9 +2,9 @@
  * Created by 502434605 on 9/1/2015.
  */
 
-var app = angular.module('InternForum',[])
+angular.module('InternForum')
 
-app.controller('AuthCtrl', [
+.controller('authController', [
     '$scope',
     '$state',
     'authFactory',
