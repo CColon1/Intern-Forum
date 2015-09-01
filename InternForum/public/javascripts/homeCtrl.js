@@ -1,9 +1,18 @@
 angular.module('InternForum').controller(
 	'homeCtrl', [
 	'$scope',
-	'$stateParams',
-	function($scope, $stateParams){
+	'posts',
+	function($scope,  posts){
 	  $scope.pageTitle = "Intern Forums";
-	  $scope.data = [{title:'what',author: 'Kody'},{title:'blah',author: 'chris'},{title:'what',author: 'admin'},{title:'what',author: 'Kody'}];
-
+	  $scope.data = posts.posts;
+	  console.log(angular.toJson(posts));
+	  $scope.addPost = function(){
+	  	if(!$scope.title || $scope.title === ''){return;}
+	  	posts.create({
+	  		title:$scope.title,
+	  		message:$scope.message,
+	  	});
+	  	$scope.title = '';
+	  	$scope.message='';
+	  };
 }]);
