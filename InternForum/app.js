@@ -9,6 +9,7 @@ var user = require('./models/userModel');
 var routes = require('./routes/index');
 var passport = require('passport');
 require('./config/passport');
+require('./models/Posts');
 mongoose.connect('mongodb://localhost/internForum');
 var app = express();
 // view engine setup

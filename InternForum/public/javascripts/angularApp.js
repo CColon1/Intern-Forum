@@ -9,13 +9,15 @@ app.config([
         .state('home', {
           url: '/home',
           templateUrl: '/templates/home.html',
-          controller: 'homeCtrl'//,
-          //resolve: {
-          //postPromise: ['posts', function(posts){
-          //  var x = posts.getAll();
-          //  return x;
-          //}]
-          //}
+          controller: 'homeCtrl',
+          resolve: {
+          postPromise: ['posts', function(posts){
+            var x = posts.getAll();
+            console.log('X: '+x);
+            return x;
+
+          }]
+          }
         }) 
         $stateProvider
         .state('postDetails', {
