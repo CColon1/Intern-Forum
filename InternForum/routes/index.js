@@ -1,7 +1,8 @@
-var express  = require('express');
-var router   = express.Router();
-var mongoose = require('mongoose');
+var express = require('express');
+var router = express.Router();
 var passport = require('passport');
+var mongoose = require('mongoose');
+var User = mongoose.model('User');
 var jwt      = require('express-jwt');
 var Post     = mongoose.model('Post');
 var Comment  = mongoose.model('Comment');
@@ -50,6 +51,16 @@ router.get('/category', function(req, res, next) {
 
 
 //get all posts
+
+
+router.get('/posts/:posts_id', function(req,res,next){
+  Comment.findById(request.params.posts_id, function(err,comments){
+    if(err)
+      response.send(err)
+    response.json(comments);
+  });
+});
+
 router.get('/posts', function(req, res, next) {
   Post.find(function(err, posts){
     if(err){ return next(err); }
@@ -74,6 +85,7 @@ router.post('/category/:category', function(req, res, next) {
     
   });
 });
+
 
 //get one post
 router.get('/posts/:post',function(req,res,next){

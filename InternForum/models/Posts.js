@@ -7,6 +7,7 @@ var PostSchema = new mongoose.Schema({
   author: String,
   comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }],
   category: {type: mongoose.Schema.Types.ObjectId, ref: 'Category'}
+
 });
 mongoose.model('Post', PostSchema);
 
