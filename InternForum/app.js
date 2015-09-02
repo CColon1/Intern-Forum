@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var user = require('./models/userModel');
 require('./models/Posts');
 require('./models/Comments');
+require('./models/Categories');
 var routes = require('./routes/index');
 var userRoute = require('./routes/users');
 var passport = require('passport');
