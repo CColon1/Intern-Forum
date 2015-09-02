@@ -53,11 +53,10 @@ router.get('/category', function(req, res, next) {
 //get all posts
 
 
-router.get('/posts/:posts_id', function(req,res,next){
-  Comment.findById(request.params.posts_id, function(err,comments){
-    if(err)
-      response.send(err)
-    response.json(comments);
+router.get('/posts/:post', function(req,res,next){
+  req.post.populate('comments', function(err, post) {
+    if (err) { return next(err); }
+    res.json(post);
   });
 });
 

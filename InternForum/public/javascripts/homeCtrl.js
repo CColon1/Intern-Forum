@@ -21,7 +21,7 @@ angular.module('InternForum').controller(
 	  		body:$scope.message,
 	  		category: $scope.CategoryId
 
-	  	});
+	  	}).success();
 	  	$scope.title = '';
 	  	$scope.message='';
 	  };
