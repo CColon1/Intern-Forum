@@ -10,7 +10,8 @@ angular.module('InternForum').factory('categories',['$http',function($http){
 	};
 	o.create = function(post){
 		return $http.post('/posts',post).success(function(data){
-			o.posts.push(data);
+			console.log('word');
+			o.categories.push(data);
 		});
 	};
 	o.get = function(id){

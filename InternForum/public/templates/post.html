@@ -1,10 +1,11 @@
 <h3><a href="#/home">{{post.title}}</a></h3>
-<p>{{post.body}}</p>
-
+<ul class="collection with-header">
+    <li class="collection-header"><h4>{{post.body}}</h4></li>
+    <li class="collection-item" ng-repeat="comment in post.comments">{{comment.body}}<br /><h6 class="pull-right">-{{comment.author}}</h6></li>
+</ul>
+</p>
 <h3>Add a Comment...</h3>
 <form ng-submit="addComment()">
-    <input type="text" ng-model="value.type" placeholder="type"></input>
+    <input type="text" ng-model="body" placeholder="type"></input>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
-

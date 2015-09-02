@@ -2,14 +2,17 @@ angular.module('InternForum').controller(
 	'postCtrl', [
 	'$scope',
 	'posts',
-	function($scope, posts, post, auth){
+	'post',
+	'authFactory',
+	function($scope, posts, post,authFactory, auth){
 		$scope.post = post;
 		console.log(post);
+
 		$scope.addComment = function(){
 		  if($scope.body === '') { return; }
 		  posts.addComment(post._id, {
 			body: $scope.body,
-			author: "user",
+			author: authFactory.currentUser(),
 		  }).success(function(comment) {
 			$scope.post.comments.push(comment);
 		  });

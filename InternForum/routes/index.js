@@ -47,6 +47,13 @@ router.get('/category', function(req, res, next) {
   });
 });
 
+router.get('/posts/:post', function(req,res,next){
+  req.post.populate('comments', function(err, post) {
+    if (err) { return next(err); }
+    res.json(post);
+  });
+});
+
 router.get('/posts', function(req, res, next) {
   Post.find(function(err, posts){
     if(err){ return next(err); }
@@ -62,30 +69,22 @@ router.post('/category/:category', function(req, res, next) {
   post.date = d.toDateString();
   post.save(function(err, post){
     if(err){ return next(err); }
-
+    console.log('test1');
     req.category.posts.push(post)
     req.category.save(function(err,category){
       if(err){return next(err);}
+       console.log('test2');
         res.json(post);
     });
     
   });
 });
 
-//get one post
-router.get('/posts/:post',function(req,res,next){
-  console.log(req) ;
-  req.post.populate('comments',function(err,post){
-    if (err)  {return next(err);}
-    res.json(post);
-  })
-});
-
 //create a comment on a specific post
 router.post('/posts/:post/comments', function(req,res,next){
   var comment = new Comment(req.body);
   comment.post = req.post;
-  comment.author = "user";
+  comment.author = req.body.author;
   comment.save(function(err,comment){
     if(err){ return next(err);}
     req.post.comments.push(comment);
