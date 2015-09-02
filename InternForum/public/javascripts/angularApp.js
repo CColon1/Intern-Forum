@@ -35,7 +35,7 @@ app.config([
         .state('login', {
           url: '/login',
           templateUrl: '/templates/login.html',
-          controller: 'loginCtrl'//,
+          controller: 'authController'//,
           //resolve: {
           //postPromise: ['posts', function(posts){
           //  var x = posts.getAll();
