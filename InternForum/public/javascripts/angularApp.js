@@ -23,13 +23,14 @@ app.config([
         .state('postDetails', {
           url: '/post',
           templateUrl: '/templates/post.html',
-          controller: 'postCtrl'//,
-          //resolve: {
-          //postPromise: ['posts', function(posts){
-          //  var x = posts.getAll();
-          //  return x;
-          //}]
-          //}
+          controller: 'postCtrl',
+          resolve: {
+          postDetailsPromise: ['detailsFactory', function(detailsFactory){
+            var x = detailsFactory.getDetails();
+            console.log(x);
+            return x;
+          }]
+          }
         })  
         $stateProvider
         .state('login', {

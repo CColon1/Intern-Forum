@@ -3,6 +3,8 @@ angular.module('InternForum').controller(
 	'$scope',
 	'$stateParams',
 	function($scope, $stateParams){
-	  $scope.value = "post";
+		$scope.value = "post";
+		$scope.addComment = function(){
 
+		}
 }]);

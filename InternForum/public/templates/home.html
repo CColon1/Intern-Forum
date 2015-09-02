@@ -11,8 +11,8 @@
           </tr>
         </thead>
 
-        <tbody>
-          <tr ng-repeat="item in data">
+        <tbody >
+          <tr ng-repeat="item in data" ng-click="gotoComments(item._id)">
             <td>{{item.title}}</td>
             <td>{{item.author}}</td>
             <td><i class="material-icons"><a href="#/posts/{{post._id}}"> visibility</i></td>
