@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 require('./models/Posts');
+require('./models/Comments');
+require('./models/Categories');
 mongoose.connect('mongodb://localhost/internForum');
 var routes = require('./routes/index');
 var users = require('./routes/users');

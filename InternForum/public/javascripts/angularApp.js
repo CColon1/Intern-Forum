@@ -10,26 +10,25 @@ app.config([
           templateUrl: '/templates/home.html',
           controller: 'homeCtrl',
           resolve: {
-          postPromise: ['posts', function(posts){
-            var x = posts.getAll();
-            console.log('X: '+x);
+            categoryPromise: ['categories', function(categories){
+            var x = categories.getAll();
             return x;
 
-          }]
+          }],
+
           }
         }) 
         $stateProvider
         .state('postDetails', {
-          url: '/post',
+          url: '/post/{id}',
           templateUrl: '/templates/post.html',
-          controller: 'postCtrl'//,
-          //resolve: {
-          //postPromise: ['posts', function(posts){
-          //  var x = posts.getAll();
-          //  return x;
-          //}]
-          //}
-        })  
+          controller: 'postCtrl',
+          resolve: {
+            post: ['$stateParams', 'posts', function($stateParams, posts) {
+              return posts.get($stateParams.id);
+            }]
+      }
+  })
         $stateProvider
         .state('login', {
           url: '/login',
