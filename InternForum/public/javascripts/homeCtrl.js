@@ -4,6 +4,7 @@ angular.module('InternForum').controller(
 	'posts',
 	'categories',
 	function($scope,  posts,categories){
+	  
 	  $scope.pageTitle = "Intern Forums";	  
 	  $scope.categories = categories.categories;
 	  $scope.posts = $scope.categories[0].posts;
@@ -11,17 +12,16 @@ angular.module('InternForum').controller(
 	  $scope.setTab = function(category){
 	  	$scope.CategoryId = category._id;
 	  	$scope.posts = category.posts;
-	  	console.log($scope.CategoryId);
 	  };
 	  console.log($scope.categories);
 	  $scope.addPost = function(){
 	  	if(!$scope.title || $scope.title === ''){return;}
-	  	posts.create($scope.CategoryId, {
+	  	categories.create($scope.CategoryId, {
 	  		title:$scope.title,
 	  		body:$scope.message,
 	  		category: $scope.CategoryId
 
-	  	}).success();
+	  	});
 	  	$scope.title = '';
 	  	$scope.message='';
 	  };
