@@ -26,10 +26,13 @@ app.config([
           controller: 'postCtrl',
           resolve: {
             post: ['$stateParams', 'posts', function($stateParams, posts) {
-              return posts.get($stateParams.id);
+              var x = posts.get($stateParams.id);
+                console.log('For x:' + angular.toJson(x));
+                return x;
             }]
       }
   })
+
         $stateProvider
         .state('login', {
           url: '/login',

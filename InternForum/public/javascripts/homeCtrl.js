@@ -4,7 +4,6 @@ angular.module('InternForum').controller(
 	'posts',
 	'categories',
 	function($scope,  posts,categories){
-	  
 	  $scope.pageTitle = "Intern Forums";	  
 	  $scope.categories = categories.categories;
 	  $scope.posts = $scope.categories[0].posts;
@@ -25,4 +24,9 @@ angular.module('InternForum').controller(
 	  	$scope.title = '';
 	  	$scope.message='';
 	  };
+		$scope.gotoComments = function(event){
+			$scope.currentPost = event;
+			$state.go('postDetails');
+			//console.log(angular.toJson(event));
+		}
 }]);
