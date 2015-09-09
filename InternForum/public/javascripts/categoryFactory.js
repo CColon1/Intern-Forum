@@ -4,14 +4,16 @@ angular.module('InternForum').factory('categories',['$http',function($http){
 	};
 	o.getAll = function(){
 		return $http.get('/category').success(function(data){
-			console.log(data);
 			angular.copy(data, o.categories);
 		});
 	};
-	o.create = function(post){
-		return $http.post('/posts',post).success(function(data){
-			console.log('word');
-			o.categories.push(data);
+	o.create = function(id,post){
+		return $http.post('/category/' + id,post).success(function(data){
+			for(var category in o.categories){
+				if(o.categories[category]._id == id){
+					o.categories[category].posts.push(data);
+				}
+			}
 		});
 	};
 	o.get = function(id){

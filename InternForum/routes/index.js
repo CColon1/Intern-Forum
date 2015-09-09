@@ -8,7 +8,6 @@ var Post     = mongoose.model('Post');
 var Comment  = mongoose.model('Comment');
 var Category = mongoose.model('Category');
 var auth     = jwt({secret: 'SECRET', userProperty: 'payload'});
-
 router.param('post', function(req,res,next,id){
   var query = Post.findById(id);
 
@@ -62,7 +61,9 @@ router.get('/posts', function(req, res, next) {
 });
 
 //create a post
+
 router.post('/category/:category', function(req, res, next) {
+  var category;
   var d = new Date();
   var post = new Post(req.body);
   post.author = "user";//req.payload.username;
