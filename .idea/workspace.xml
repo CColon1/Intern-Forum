@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d997dc0-b1ba-44b5-a68b-efddd4fbc31c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/InternForum/routes/socket.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/InternForum/public/javascripts/socketFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InternForum/app.js" afterPath="$PROJECT_DIR$/InternForum/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InternForum/public/javascripts/categoryFactory.js" afterPath="$PROJECT_DIR$/InternForum/public/javascripts/categoryFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InternForum/public/javascripts/homeCtrl.js" afterPath="$PROJECT_DIR$/InternForum/public/javascripts/homeCtrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InternForum/views/index.ejs" afterPath="$PROJECT_DIR$/InternForum/views/index.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InternForum/routes/index.js" afterPath="$PROJECT_DIR$/InternForum/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InternForum/package.json" afterPath="$PROJECT_DIR$/InternForum/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InternForum/bin/www" afterPath="$PROJECT_DIR$/InternForum/bin/www" />
     </list>
     <ignored path="Intern-Forum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/InternForum/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9408397">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state vertical-scroll-proportion="-2.6153846">
+              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -102,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/InternForum/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.77272725">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -173,9 +165,9 @@
         <option value="$PROJECT_DIR$/InternForum/public/javascripts/controllers/imageFactory.js" />
         <option value="$PROJECT_DIR$/InternForum/routes/users.js" />
         <option value="$PROJECT_DIR$/InternForum/public/templates/user.html" />
-        <option value="$PROJECT_DIR$/InternForum/app.js" />
         <option value="$PROJECT_DIR$/InternForum/package.json" />
         <option value="$PROJECT_DIR$/InternForum/views/index.ejs" />
+        <option value="$PROJECT_DIR$/InternForum/app.js" />
       </list>
     </option>
   </component>
@@ -498,9 +490,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="61" y="5" width="1833" height="682" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16070446" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16070446" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -892,14 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/InternForum/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/InternForum/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.807693">
@@ -910,8 +894,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/InternForum/views/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9408397">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/InternForum/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77272725">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -17,11 +17,8 @@ var routes = require('./routes/index');
 var userRoute = require('./routes/users');
 var app = express();
 
-var routes = require('./routes/index');
-var userRoute = require('./routes/users');
 var passport = require('passport');
 require('./config/passport');
-mongoose.connect('mongodb://localhost/internForum');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
