@@ -19,7 +19,7 @@ angular.module('InternForum')
         var token = auth.getToken();
 
         if(token){
-            var payload = JSON.parse($window.atob(token.split('.')[1]));
+            var payload = JSON.parse($window.atob(token.split('.')[1])); //decodes base-64 encoded string
 
             return payload.exp > Date.now() / 1000;
         } else {

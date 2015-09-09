@@ -56,9 +56,20 @@ app.config([
           //  return x;
           //}]
           //}
-        })   
-
-         $urlRouterProvider.otherwise('home');
+        })
+        $stateProvider
+            .state('user', {
+                url: '/user/:pictureID',
+                templateUrl: '/templates/user.html',
+                controller: 'userController',
+                resolve: {
+                    imagePromise: ['$stateParams','imageFactory', function($stateParams,imageFactory){
+                        var x = imageFactory.get($stateParams.pictureID);
+                        return x;
+                    }]
+                }
+            })
+        $urlRouterProvider.otherwise('home');
     }
 
 

@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<h2>Account Management</h2>
+</div>
+    <img ng-src="{{getFiles}}" id="myImage"/>
+</div>
+<div ng-controller="NavCtrl">
+<form>
+    <input type="file" name="filefield" data-user="{{currentUser()}}" onchange="angular.element(this).scope().uploadFile(this.files,angular.element(this).data('user'),'testplz')"/></input>
+</form>
+</div>
 
-</body>
-</html>
+<script>
+    jQuery(function($){
+        $('#myImage').Jcrop();
+    });
+</script>
